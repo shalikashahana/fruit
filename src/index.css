@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background-color: #133234;
+  scroll-behavior: auto; /* Handled smoothly by Lenis */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #133234;
+  color: #FFF4E0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: rgba(19, 50, 52, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 244, 224, 0.1);
+}
+
+.glass-panel-glow {
+  background: rgba(19, 50, 52, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 138, 31, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(255, 138, 31, 0.15);
+}
+
+/* Hide scrollbar for clean luxury feel while preserving full scrollability */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d2527;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 138, 31, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 138, 31, 0.8);
+}
+
+/* Custom glow text effects */
+.text-glow {
+  text-shadow: 0 0 25px rgba(255, 138, 31, 0.35);
+}
+
+/* Will-change optimization for scroll overlays */
+.gpu-accel {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
